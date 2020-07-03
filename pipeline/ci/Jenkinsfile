@@ -3,8 +3,8 @@
 deployProject (
     serviceName: "sonar-golang-demo",
     projectType: "go",
-    customImage: "artifactory.rakuten-it.com/dsd-docker-dev-local/golang-dev:1.14.2-alpine3.11",
-    testCommand: "export http_proxy=http://pkg.proxy.prod.jp.local:10080 && export https_proxy=http://pkg.proxy.prod.jp.local:10080 && go mod download && go test -coverprofile=coverage.out -json > test-report.json",
+    customImage: "golang:1.14.4",
+    testCommand: "export http_proxy=http://pkg.proxy.prod.jp.local:10080 && export https_proxy=http://pkg.proxy.prod.jp.local:10080 && go test -coverprofile=coverage.out -json > test-report.json",
     sonarQubeName: "SonarQubeDemo",
     skipBuild: "true",
     skipDockerBuild: "true",
